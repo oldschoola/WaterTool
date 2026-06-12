@@ -542,7 +542,7 @@ public sealed class WaterQuad : Component, Component.ExecuteInEditor, Component.
 
 		m_DrawAttributes.Set("NormalTiling", tiling);
 
-		SetWaterExclusionVolumes(Scene.Camera.WorldPosition);
+		SetWaterExclusionVolumes(Scene.Camera?.WorldPosition ?? WorldPosition);
 		SetHullExclusionVolumes();
 	}
 
