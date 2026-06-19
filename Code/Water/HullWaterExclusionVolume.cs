@@ -195,10 +195,8 @@ public sealed class HullWaterExclusionVolume : Component, Component.ExecuteInEdi
 
 	/// <summary>
 	/// Fills the 4 rows of the WorldToLocal matrix (row-major, for mul(M, float4(worldPos,1)) in HLSL).
-	/// </summary>
-	/// <summary>
 	/// Matches WorldTransform.PointToLocal = Rotation.Inverse * (worldPt - Position) / Scale.
-	/// In s&box: Forward=(1,0,0)=localX, Left=-Right=(0,1,0)=localY, Up=(0,0,1)=localZ.
+	/// In s&amp;box: Forward=(1,0,0)=localX, Left=-Right=(0,1,0)=localY, Up=(0,0,1)=localZ.
 	/// </summary>
 	public void GetWorldToLocalRows(out Vector4 r0, out Vector4 r1, out Vector4 r2, out Vector4 r3)
 	{
